@@ -1,0 +1,28 @@
+type Query{
+    findChatMessages(senderId:String,recipientId:String):[ChatMessage]
+    countNewMessages(senderId:String,recipientId:String):Int
+    newMessages(reciver:String):[ChatMessageDTO]
+}
+
+type ChatMessage{
+    id :String ,
+    chatId :String ,
+    senderId: String,
+    recipientId: String ,
+    senderName :String ,
+    recipientName: String,
+    content :String ,
+    timestamp: String ,
+    status :String
+}
+
+type ChatMessageDTO{
+    senderId: String,
+    recipientId: String ,
+    senderName :String ,
+    recipientName: String,
+    content :String ,
+    timestamp: String ,
+    status :String,
+    nombre_message_unread :Int
+}
